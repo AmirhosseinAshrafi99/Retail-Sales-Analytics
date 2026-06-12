@@ -1,148 +1,102 @@
 # Retail Sales Analytics
 
-## Project Overview
+## Objective
 
-This project analyzes global retail sales data to identify the key drivers of profitability and uncover areas of financial underperformance.
-
-Using Python for data cleaning and exploratory data analysis (EDA), and Power BI for dashboard development, the project investigates sales trends, category performance, discount strategies, and country-level profitability.
-
----
-
-## Business Questions
-
-1. Which product categories generate the highest sales and profits?
-2. Which countries contribute the most and least profit?
-3. How do discounts impact profitability?
-4. Which subcategories are causing financial losses?
-5. What actions can improve overall business performance?
-
----
+Analyze global retail sales performance and identify the factors affecting profitability across products, categories, and countries.
 
 ## Tools Used
 
 - Python
 - Pandas
 - Matplotlib
-- Jupyter Notebook
 - Power BI
 - Git
 - GitHub
 
----
+## Dataset
 
-## Data Cleaning
+Global Superstore sales dataset containing:
 
-The following preprocessing steps were performed:
-
-- Converted sales from text to numeric format
-- Standardized mixed date formats
-- Created shipping_days feature
-- Checked for missing values
-- Validated data types
-- Exported cleaned dataset for Power BI
-
----
+- 51,290 orders
+- Multiple product categories
+- Global sales records
+- Revenue, profit, discount, and shipping information
 
 ## Key Findings
 
 ### Category Performance
 
-| Category | Sales | Profit Margin |
-|-----------|--------|---------------|
-| Technology | Highest | ~14% |
-| Office Supplies | Moderate | ~13.7% |
-| Furniture | High Sales but Lowest Margin | ~7% |
-
-Furniture generates substantial revenue but significantly lower profitability.
-
----
+- Technology generated the highest sales and profit.
+- Furniture generated strong sales but the lowest profit margin (~7%).
 
 ### Discount Impact
 
-A strong negative relationship exists between discount levels and profitability.
+- Discounts showed a negative correlation with profit.
+- Country-level analysis showed a very strong negative relationship between discount rates and profit margins.
 
-Key observations:
+### Subcategory Analysis
 
-- Orders with no discount are highly profitable.
-- Profitability declines rapidly above 20% discounts.
-- Discounts above 50% frequently generate losses.
-- Extreme discounts (70–85%) produce the largest losses.
+- Tables was the worst-performing subcategory.
+- Average discount for Tables was approximately 29%.
+- Higher discounts were strongly associated with losses.
 
----
+### Geographic Insights
 
-### Problematic Subcategory
-
-Tables was identified as the worst-performing subcategory.
-
-- Total Profit: -64,083
-- Average Discount: 29%
-- Correlation between Discount and Profit: -0.68
-
----
-
-### Country-Level Findings
-
-Highest Profit Countries:
+Most profitable countries:
 
 - United States
 - China
 - India
+- United Kingdom
+- France
 
-Lowest Profit Countries:
+Least profitable countries:
 
 - Turkey
 - Nigeria
 - Netherlands
-
-Turkey and Nigeria exhibit extremely high average discounts and severe negative profit margins.
-
----
-
-## Recommendations
-
-1. Reduce aggressive discounting policies.
-2. Review pricing strategy for Tables.
-3. Investigate loss-making markets such as Turkey and Nigeria.
-4. Focus growth efforts on Technology products.
-5. Implement discount thresholds to protect margins.
-
----
+- Honduras
+- Pakistan
 
 ## Dashboard
 
-The Power BI dashboard includes:
-
-- Sales KPIs
-- Profit KPIs
-- Category Performance Analysis
-- Country Performance Analysis
-- Discount vs Profit Analysis
-
----
-
-## Dashboard Preview
-
 ![Retail Sales Dashboard](images/Retail_Sales_Dashboard.png)
 
-## Repository Structure
+The dashboard highlights:
 
+- Total Sales
+- Total Profit
+- Average Discount
+- Category Performance
+- Country Profitability
+- Discount vs Profit Relationship
+
+## Recommendations
+
+1. Review discount policies for Furniture and Tables.
+2. Investigate pricing strategy in Turkey and Nigeria.
+3. Expand high-margin Technology products.
+4. Monitor discount thresholds to prevent profit erosion.
+
+## Project Structure
+
+```text
 Retail-Sales-Analytics/
 │
-├── data/
-│ ├── raw/
-│ └── processed/
-│
-├── notebooks/
-│ └── retail_sales_analysis.ipynb
-│
 ├── dashboard/
+│   └── retail_sales_dashboard.pbix
+│
+├── data/
+│   ├── raw/
+│   └── processed/
 │
 ├── images/
+│   └── retail_sales_dashboard.png
+│
+├── notebooks/
+│   └── retail_sales_analysis.ipynb
+│
+├── sql/
 │
 └── README.md
-
----
-
-## Author
-
-Amir Hossein Ashrafi
+```
